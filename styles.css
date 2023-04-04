@@ -1,0 +1,91 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    border: 5px solid black;
+    height: 20rem;
+    width: 20rem;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#btn{
+    position: absolute;
+    transition: 1s;
+    height: 2rem;
+    width: 4rem;
+    border: 2px solid black;
+    background: transparent;
+}
+.cont{
+    height: 100dvh;
+    width: 100dvw;
+    background: rgb(70, 70, 75);
+}
+.typeWriter{
+    position: relative;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    background: rgb(50, 50, 55);
+    height: 5rem;
+    border-radius: 5rem;
+}
+
+.typeWriter input[type=text]{
+    width: 80%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: 100%;
+    background: transparent;
+    border-top-left-radius: 5rem; border-bottom-left-radius:5rem ;
+    padding-left:1rem ;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+.typeWriter button{
+    width: 20%;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(0,-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    border-top-right-radius: 5rem; border-bottom-right-radius:5rem ;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+.typeWriter button:hover{
+    background: rgb(40, 40, 45);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.answer{
+    position: absolute;
+    background: rgb(100, 100, 105);
+    height: 80%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#answer{
+    color: rgb(200, 200, 200);
+    margin: 1rem;
+}

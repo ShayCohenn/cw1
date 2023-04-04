@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="answer">
+            <p id="answer"></p>
+        </div>
+        <div class="typeWriter" id="typeWriter">
+            <input type="text" placeholder="Ask for a random story" id="txtBox">
+            <button onclick="btn()">ASK</button>
+        </div>
+    </div>
+    <script>
+        let i = 0
+        let pressed = false;
+        function typing() {
+            let text = "";
+            let letters = [];
+            if (pressed) {
+                if(txtBox.value == "hello"){
+                text = "Hey! How are you doing today?"
+                letters = text.split("")
+                }
+                else if(txtBox.value.includes("story")){
+                    text = "Once upon a time, in a small town nestled in the mountains, there was a little girl named Lily. She lived with her parents in a small cottage on the edge of the forest. Lily loved nothing more than exploring the woods and discovering all the creatures that lived within it.One day, while on a walk, Lily stumbled upon a strange plant with vibrant purple leaves. Intrigued by its uniqueness, she decided to take a sample of the plant home to show her parents. But as soon as she picked the plant, she began to feel dizzy and disoriented.When Lily awoke, she found herself in a strange, new world. Everything around her was made of candy, and the sky was a swirl of cotton candy colors. She soon met a talking rabbit who told her that she was in the Land of Sweets and that the only way to return home was to find the mystical Sugar Crystal.Lily set out on her quest, facing many challenges and encountering fantastical creatures along the way. Eventually, she found the Sugar Crystal guarded by a fearsome dragon. Using her wits and bravery, she defeated the dragon and retrieved the crystal.With the Sugar Crystal in hand, Lily was able to return home, where her parents were overjoyed to see her again. From that day on, she treasured the memory of her magical adventure in the Land of Sweets.";
+                    letters = text.split("")
+                }
+                if (i < text.length) {
+                    answer.innerHTML += letters[i];
+                    i++;
+                }
+                if(i == letters.length){
+                    letters = [];
+                    pressed = false;
+                    answer.innerHTML += "<br><br>";
+                }
+            }
+        }
+        function btn() {
+            pressed = true;
+            setInterval(typing, 80)
+        }
+    </script>
+</body>
+
+</html>
